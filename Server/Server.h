@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_Server.h"
+#include <QTcpServer>
 
 class Server : public QMainWindow
 {
@@ -14,4 +15,5 @@ private slots:
 private:
 	Ui::ServerClass ui;
 	bool listening=false;
+	QTcpServer* server = new QTcpServer();
 };

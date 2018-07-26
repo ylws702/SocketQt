@@ -13,13 +13,13 @@ void Client::slt_connectButton_clicked()
 {
 	if (!connected)
 	{
-		QMessageBox::warning(this, tr("提示信息"), tr("开始连接。"));
 		const QString IP = ui.ipEdit->text();
 		const int port = ui.portEdit->text().toInt();
 		socket->abort();
 		socket->connectToHost(IP, port);
 		if (!socket->waitForConnected())
 		{
+			QMessageBox::warning(this, tr("提示信息"), tr("连接失败。"));
 			qDebug() << "Connection failed!";
 			return;
 		}
