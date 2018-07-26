@@ -11,8 +11,12 @@ class Client : public QMainWindow
 
 public:
 	Client(QWidget *parent = Q_NULLPTR);
+	~Client();
 public slots:
 	void slt_connectButton_clicked();
+	void slt_sendButton_clicked();
+	void slt_socket_readyRead();
+	void slt_socket_disconnected();
 private:
 	Ui::ClientClass ui;
 	bool connected = false;

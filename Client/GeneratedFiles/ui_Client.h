@@ -17,10 +17,10 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -42,13 +42,13 @@ public:
     QPushButton *connectButton;
     QVBoxLayout *verticalLayout;
     QLabel *label;
-    QPlainTextEdit *sendEdit;
+    QTextEdit *sendEdit;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *sendButton;
     QSpacerItem *verticalSpacer;
     QLabel *label_2;
-    QPlainTextEdit *getEdit;
+    QTextEdit *getEdit;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -111,7 +111,7 @@ public:
 
         verticalLayout->addWidget(label);
 
-        sendEdit = new QPlainTextEdit(centralWidget);
+        sendEdit = new QTextEdit(centralWidget);
         sendEdit->setObjectName(QStringLiteral("sendEdit"));
 
         verticalLayout->addWidget(sendEdit);
@@ -140,7 +140,7 @@ public:
 
         verticalLayout->addWidget(label_2);
 
-        getEdit = new QPlainTextEdit(centralWidget);
+        getEdit = new QTextEdit(centralWidget);
         getEdit->setObjectName(QStringLiteral("getEdit"));
 
         verticalLayout->addWidget(getEdit);
@@ -151,7 +151,7 @@ public:
         ClientClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ClientClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 23));
+        menuBar->setGeometry(QRect(0, 0, 600, 22));
         ClientClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ClientClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
