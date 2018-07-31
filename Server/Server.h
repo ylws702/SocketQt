@@ -24,5 +24,7 @@ private:
 	Ui::ServerClass ui;
 	bool listening=false;
 	QTcpServer* server = new QTcpServer();
+	qintptr serverHandle = server->socketDescriptor();
 	QTcpSocket* socket = new QTcpSocket();
+	qintptr socketHandle = socket->socketDescriptor();
 };
